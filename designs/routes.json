@@ -5,6 +5,10 @@
             "component": "sessionpage2Component"
         },
         {
+            "path": "table",
+            "component": "tableComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "home",
             "pathMatch": "full",

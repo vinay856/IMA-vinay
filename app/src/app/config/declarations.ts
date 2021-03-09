@@ -15,6 +15,8 @@ window['neutrinos'] = {
 }
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-tableComponent
+import { tableComponent } from '../components/tableComponent/table.component';
 //CORE_REFERENCE_IMPORT-sessionpage2Component
 import { sessionpage2Component } from '../components/sessionpage2Component/sessionpage2.component';
 
@@ -44,6 +46,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-tableComponent
+tableComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-sessionpage2Component
 sessionpage2Component,
 
@@ -72,5 +76,5 @@ export const appProviders = [
 */
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
-export const appRoutes = [{path: 'home', component: sessionpage2Component},{path: '', redirectTo: 'home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+export const appRoutes = [{path: 'home', component: sessionpage2Component},{path: 'table', component: tableComponent},{path: '', redirectTo: 'home', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

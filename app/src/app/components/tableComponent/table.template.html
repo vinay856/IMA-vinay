@@ -1,0 +1,45 @@
+<div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="tab1">
+      <div fxLayout="column">
+
+        <div fxLayout="row" fxLayoutAlign="end">
+          <div fxLayout="column" fxFlex="end">
+            <mat-form-field fxFlex="100">
+              <input matInput (keyup)="search($event.target.value)" placeholder="Search">
+            </mat-form-field>
+          </div>
+        </div>
+        <table mat-table [dataSource]="datasource" matSort class="table-width-fix">
+          <tr mat-header-row *matHeaderRowDef="[&apos;name&apos;,&apos;email&apos;,&apos;contact&apos;,&apos;2403f24f-2297-8943-c080-a3197cfb0e26&apos;]"></tr>
+          <tr mat-row *matRowDef="let row; columns: [&apos;name&apos;,&apos;email&apos;,&apos;contact&apos;,&apos;2403f24f-2297-8943-c080-a3197cfb0e26&apos;];"></tr>
+
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>name</th>
+            <td mat-cell *matCellDef="let table; let i = index;">{{table.name}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef>email</th>
+            <td mat-cell *matCellDef="let table; let i = index;">{{table.email}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="contact">
+            <th mat-header-cell *matHeaderCellDef>contact</th>
+            <td mat-cell *matCellDef="let table; let i = index;">{{table.contact}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="2403f24f-2297-8943-c080-a3197cfb0e26">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let table; let i = index;">
+              <mat-checkbox [required]="false"></mat-checkbox>
+            </td>
+          </ng-container>
+        </table>
+        <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" (page)="5">
+        </mat-paginator>
+
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

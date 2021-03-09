@@ -3,5 +3,10 @@
         "appPageName": "sessionpage2",
         "componentName": "sessionpage2Component",
         "createDate": "2021-03-09T05:06:55.594Z"
+    },
+    "85cde3a7-f9fb-17cc-8fc0-baab22f29608": {
+        "appPageName": "table",
+        "componentName": "tableComponent",
+        "createDate": "2021-03-09T08:59:32.581Z"
     }
 }

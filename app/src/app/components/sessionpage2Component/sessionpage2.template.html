@@ -1,7 +1,23 @@
-<div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true" [fxHide]="false">
-  <mat-horizontal-stepper>
-    <mat-step></mat-step>
-    <mat-step></mat-step>
-    <mat-step></mat-step>
-  </mat-horizontal-stepper>
+<div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+  <mat-card style="margin-top:40px;">
+    <mat-card-content align="center">
+      <form style="margin-top:50px;">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" [fxHide]="false">
+          <div>
+          </div>
+          <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput placeholder="Enter username" [required]="false">
+
+          </mat-form-field>
+          <div>
+
+          </div>
+          <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput placeholder="Enter password" [required]="false">
+
+          </mat-form-field><button mat-raised-button color="primary" (click)="onSubmit()">submit</button><button mat-raised-button>cancel</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
 </div>
